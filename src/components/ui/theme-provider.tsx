@@ -1,4 +1,7 @@
 
+"use client"
+
+import * as React from "react"
 import { createContext, useContext, useEffect, useState } from "react"
 
 type Theme = "dark" | "light"
@@ -28,7 +31,7 @@ export function ThemeProvider({
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
+    () => (typeof localStorage !== "undefined" && localStorage.getItem(storageKey) as Theme) || defaultTheme
   )
 
   useEffect(() => {
