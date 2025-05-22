@@ -1,6 +1,7 @@
 
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { Video } from "lucide-react";
 
 const HeroSection = () => {
   const taglineRef = useRef<HTMLHeadingElement>(null);
@@ -31,19 +32,34 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#121212] to-[#1F1F1F] overflow-hidden pt-16">
-      {/* Background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-10 w-40 h-40 rounded-full bg-[#00bfa6]/10 blur-3xl"></div>
-        <div className="absolute top-1/3 right-0 w-60 h-60 rounded-full bg-[#2d9cdb]/10 blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-80 h-80 rounded-full bg-[#f0e6d2]/5 blur-3xl"></div>
-        
-        {/* Abstract educational elements */}
-        <div className="absolute top-10 left-10 w-16 h-16 border border-[#00bfa6]/20 rounded-md rotate-12 opacity-30"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 border border-[#2d9cdb]/20 rounded-full opacity-30"></div>
-        <div className="absolute bottom-20 left-20 w-20 h-20 border border-[#f0e6d2]/20 rotate-45 opacity-30"></div>
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="absolute w-full h-full object-cover object-center"
+        >
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-white-lines-moving-through-a-dark-blue-background-48931-large.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
-      <div className="container mx-auto px-4 z-10">
+      {/* Background elements */}
+      <div className="absolute inset-0 overflow-hidden z-10 pointer-events-none">
+        <div className="absolute top-1/4 -left-10 w-40 h-40 rounded-full bg-[#00bfa6]/20 blur-3xl"></div>
+        <div className="absolute top-1/3 right-0 w-60 h-60 rounded-full bg-[#2d9cdb]/20 blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-80 h-80 rounded-full bg-[#f0e6d2]/10 blur-3xl"></div>
+        
+        {/* Abstract educational elements */}
+        <div className="absolute top-10 left-10 w-16 h-16 border border-[#00bfa6]/30 rounded-md rotate-12 opacity-40"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 border border-[#2d9cdb]/30 rounded-full opacity-40"></div>
+        <div className="absolute bottom-20 left-20 w-20 h-20 border border-[#f0e6d2]/30 rotate-45 opacity-40"></div>
+      </div>
+
+      <div className="container mx-auto px-4 z-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 
             ref={taglineRef}
@@ -60,9 +76,10 @@ const HeroSection = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button 
-              className="bg-[#00bfa6] hover:bg-[#00bfa6]/80 text-white text-lg py-6 px-8"
+              className="bg-[#00bfa6] hover:bg-[#00bfa6]/80 text-white text-lg py-6 px-8 group"
               size="lg"
             >
+              <Video className="mr-2 h-4 w-4 group-hover:animate-pulse" />
               Explore Services
             </Button>
             <Button 
@@ -93,14 +110,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      
-      {/* Hero images */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#121212] to-transparent z-10"></div>
-      <img 
-        src="/lovable-uploads/0936b0f3-ae34-4f84-a495-1a94de3ba48c.png" 
-        alt="Graduate students" 
-        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-5xl opacity-30 pointer-events-none"
-      />
     </section>
   );
 };
