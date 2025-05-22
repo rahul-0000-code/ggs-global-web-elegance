@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -58,6 +60,46 @@
   }
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
 .animate-in {
   opacity: 1 !important;
   transform: translateY(0) translateX(0) scale(1) !important;
@@ -65,4 +107,51 @@
 
 .animate-pulse {
   animation: ping 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-glow {
+  filter: drop-shadow(0 0 8px var(--glow-color, rgba(0, 191, 166, 0.6)));
+  transition: filter 0.3s ease;
+}
+
+.animate-glow:hover {
+  filter: drop-shadow(0 0 12px var(--glow-color, rgba(0, 191, 166, 0.8)));
+}
+
+.fancy-border {
+  position: relative;
+  border: 1px solid rgba(45, 156, 219, 0.3);
+  border-radius: 1rem;
+  background: rgba(19, 19, 19, 0.4);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.fancy-border::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent, 
+    rgba(0, 191, 166, 0.1), 
+    transparent 30%
+  );
+  animation: rotateGlow 6s linear infinite;
+}
+
+.fancy-border::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: rgba(19, 19, 19, 0.9);
+  border-radius: calc(1rem - 1px);
+  z-index: 0;
+}
+
+.fancy-border > * {
+  position: relative;
+  z-index: 1;
 }
