@@ -64,7 +64,8 @@ const PaymentSuccess = () => {
       {/* Confetti container */}
       <div id="confetti-container" className="fixed inset-0 overflow-hidden pointer-events-none z-50"></div>
       
-      <style jsx>{`
+      <style>
+        {`
         @keyframes confetti {
           0% {
             transform: translateY(0) rotate(0);
@@ -75,7 +76,8 @@ const PaymentSuccess = () => {
             opacity: 0;
           }
         }
-      `}</style>
+        `}
+      </style>
       
       <Navbar />
       

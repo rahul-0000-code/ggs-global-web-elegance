@@ -9,6 +9,7 @@ import TrustSection from "@/components/TrustSection";
 import GlobalPresenceSection from "@/components/GlobalPresenceSection";
 import ContactSection from "@/components/ContactSection";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import HighlightedTagline from "@/components/HighlightedTagline";
 import "../styles/animations.css";
 
 const Index = () => {
@@ -33,6 +34,11 @@ const Index = () => {
       
       <Navbar />
       <HeroSection />
+      
+      <div className="container mx-auto px-4 py-10 max-w-6xl">
+        <HighlightedTagline className="my-16" />
+      </div>
+      
       <AboutSection />
       <div id="services">
         <ServicesSection />
