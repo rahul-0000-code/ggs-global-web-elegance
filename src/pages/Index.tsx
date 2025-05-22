@@ -1,6 +1,5 @@
 
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
@@ -23,10 +22,16 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
-      <TrustSection />
+      <div id="services">
+        <ServicesSection />
+      </div>
+      <div id="trust">
+        <TrustSection />
+      </div>
       <GlobalPresenceSection />
-      <ContactSection />
+      <div id="contact">
+        <ContactSection />
+      </div>
       <Footer />
       <ScrollToTopButton />
     </div>

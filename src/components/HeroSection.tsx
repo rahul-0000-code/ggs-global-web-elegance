@@ -2,9 +2,11 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Video } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const taglineRef = useRef<HTMLHeadingElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,8 +32,19 @@ const HeroSection = () => {
     };
   }, []);
 
+  const handleExploreServices = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleBookConsultation = () => {
+    navigate('/book-consultation');
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#121212] to-[#1F1F1F] overflow-hidden pt-16">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#121212] to-[#1F1F1F] overflow-hidden pt-16">
       {/* Video Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-black/40 z-10"></div>
@@ -78,6 +91,7 @@ const HeroSection = () => {
             <Button 
               className="bg-[#00bfa6] hover:bg-[#00bfa6]/80 text-white text-lg py-6 px-8 group"
               size="lg"
+              onClick={handleExploreServices}
             >
               <Video className="mr-2 h-4 w-4 group-hover:animate-pulse" />
               Explore Services
@@ -86,6 +100,7 @@ const HeroSection = () => {
               variant="outline" 
               className="border-[#2d9cdb] text-[#2d9cdb] hover:bg-[#2d9cdb]/10 text-lg py-6 px-8"
               size="lg"
+              onClick={handleBookConsultation}
             >
               Book Consultation
             </Button>
