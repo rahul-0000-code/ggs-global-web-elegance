@@ -1,6 +1,6 @@
 
 import { useEffect, useRef, useState } from "react";
-import { School, Plane, MapPin, Globe, Users, Building } from "lucide-react";
+import { School, MapPin, Globe, Users, Building } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const GlobalPresenceSection = () => {
@@ -221,20 +221,21 @@ const GlobalPresenceSection = () => {
                 </svg>
               ))}
               
-              {/* Animated Airplanes */}
+              {/* Animated Degree Symbols */}
               {isVisible && flightPaths.map((path, index) => (
                 <div 
-                  key={`plane-${index}`}
-                  className="absolute pointer-events-none z-20"
+                  key={`degree-${index}`}
+                  className="absolute pointer-events-none z-20 text-[#00bfa6] text-2xl font-bold"
                   style={{
-                    animation: `flyPath${index} 8s infinite linear ${path.delay}s`
+                    animation: `flyPath${index} 8s infinite linear ${path.delay}s`,
+                    textShadow: '0 0 10px currentColor'
                   }}
                 >
-                  <Plane className="w-6 h-6 text-[#00bfa6] drop-shadow-lg" />
+                  °
                 </div>
               ))}
               
-              {/* Location Pins */}
+              {/* Location Pins with Default Visible Names */}
               {isVisible && locations.map((location, index) => (
                 <div 
                   key={location.id}
@@ -262,7 +263,14 @@ const GlobalPresenceSection = () => {
                       ></div>
                     </div>
                     
-                    {/* Enhanced Tooltip */}
+                    {/* Always Visible Region Name */}
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 whitespace-nowrap">
+                      <div className="bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
+                        <span className="text-white text-xs font-medium">{location.region}</span>
+                      </div>
+                    </div>
+                    
+                    {/* Enhanced Tooltip on Hover */}
                     <div className={`absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 w-64 transition-all duration-300 ${
                       activeRegion === location.id ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2'
                     }`}>
@@ -327,56 +335,58 @@ const GlobalPresenceSection = () => {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes pinAppear {
-          0% {
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(0);
+      <style>
+        {`
+          @keyframes pinAppear {
+            0% {
+              opacity: 0;
+              transform: translate(-50%, -50%) scale(0);
+            }
+            70% {
+              opacity: 1;
+              transform: translate(-50%, -50%) scale(1.3);
+            }
+            100% {
+              opacity: 1;
+              transform: translate(-50%, -50%) scale(1);
+            }
           }
-          70% {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1.3);
+          
+          @keyframes drawPath {
+            0% {
+              stroke-dashoffset: 100;
+            }
+            100% {
+              stroke-dashoffset: 0;
+            }
           }
-          100% {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1);
+          
+          @keyframes flyPath0 {
+            0% { left: 20%; top: 35%; transform: rotate(45deg); }
+            100% { left: 50%; top: 25%; transform: rotate(45deg); }
           }
-        }
-        
-        @keyframes drawPath {
-          0% {
-            stroke-dashoffset: 100;
+          
+          @keyframes flyPath1 {
+            0% { left: 50%; top: 25%; transform: rotate(90deg); }
+            100% { left: 75%; top: 45%; transform: rotate(90deg); }
           }
-          100% {
-            stroke-dashoffset: 0;
+          
+          @keyframes flyPath2 {
+            0% { left: 60%; top: 40%; transform: rotate(30deg); }
+            100% { left: 85%; top: 35%; transform: rotate(30deg); }
           }
-        }
-        
-        @keyframes flyPath0 {
-          0% { left: 20%; top: 35%; transform: rotate(45deg); }
-          100% { left: 50%; top: 25%; transform: rotate(45deg); }
-        }
-        
-        @keyframes flyPath1 {
-          0% { left: 50%; top: 25%; transform: rotate(90deg); }
-          100% { left: 75%; top: 45%; transform: rotate(90deg); }
-        }
-        
-        @keyframes flyPath2 {
-          0% { left: 60%; top: 40%; transform: rotate(30deg); }
-          100% { left: 85%; top: 35%; transform: rotate(30deg); }
-        }
-        
-        @keyframes flyPath3 {
-          0% { left: 85%; top: 35%; transform: rotate(-120deg); }
-          100% { left: 20%; top: 35%; transform: rotate(-120deg); }
-        }
-        
-        @keyframes flyPath4 {
-          0% { left: 75%; top: 45%; transform: rotate(-45deg); }
-          100% { left: 60%; top: 40%; transform: rotate(-45deg); }
-        }
-      `}</style>
+          
+          @keyframes flyPath3 {
+            0% { left: 85%; top: 35%; transform: rotate(-120deg); }
+            100% { left: 20%; top: 35%; transform: rotate(-120deg); }
+          }
+          
+          @keyframes flyPath4 {
+            0% { left: 75%; top: 45%; transform: rotate(-45deg); }
+            100% { left: 60%; top: 40%; transform: rotate(-45deg); }
+          }
+        `}
+      </style>
     </section>
   );
 };
