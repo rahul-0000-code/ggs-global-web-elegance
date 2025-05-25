@@ -43,6 +43,13 @@ const HeroSection = () => {
     navigate('/book-consultation');
   };
 
+  const institutes = [
+    { name: "Harvard University", logo: "🎓", field: "Medicine & Business" },
+    { name: "Oxford University", logo: "🏛️", field: "Liberal Arts & Sciences" },
+    { name: "MIT", logo: "⚗️", field: "Technology & Engineering" },
+    { name: "Stanford University", logo: "🌟", field: "Computer Science & Innovation" }
+  ];
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#121212] to-[#1F1F1F] overflow-hidden pt-16">
       {/* Video Background */}
@@ -106,20 +113,53 @@ const HeroSection = () => {
             </Button>
           </div>
           
-          <div className="mt-16">
-            <p className="text-[#a0a0a0] mb-4 text-sm uppercase tracking-widest">Trusted By</p>
-            <div className="flex flex-wrap justify-center gap-8 items-center opacity-70">
-              <div className="w-20 h-12 bg-white/10 rounded-md backdrop-blur-sm flex items-center justify-center">
-                <span className="text-[#e0e0e0] font-semibold text-xs">UNIVERSITY 1</span>
+          <div className="mt-20">
+            <p className="text-[#a0a0a0] mb-8 text-sm uppercase tracking-widest font-semibold">
+              Our Students Excel At World's Top Universities
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              {institutes.map((institute, index) => (
+                <div 
+                  key={index}
+                  className="group relative bg-gradient-to-br from-[#1F1F1F]/80 to-[#2d2d2d]/60 backdrop-blur-xl rounded-2xl p-6 border border-[#00bfa6]/20 hover:border-[#00bfa6]/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-[#00bfa6]/20"
+                  style={{
+                    animationDelay: `${index * 0.2}s`
+                  }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#00bfa6]/5 to-[#2d9cdb]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  <div className="relative z-10">
+                    <div className="text-4xl mb-4 group-hover:animate-bounce">
+                      {institute.logo}
+                    </div>
+                    <h3 className="text-[#f0e6d2] font-bold text-lg mb-2 group-hover:text-[#00bfa6] transition-colors duration-300">
+                      {institute.name}
+                    </h3>
+                    <p className="text-[#a0a0a0] text-sm leading-relaxed">
+                      {institute.field}
+                    </p>
+                  </div>
+                  
+                  {/* Decorative corner accent */}
+                  <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#00bfa6]/30 rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-[#2d9cdb]/30 rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Success metrics */}
+            <div className="mt-12 flex flex-wrap justify-center gap-8 text-center">
+              <div className="bg-[#1F1F1F]/50 backdrop-blur-sm rounded-xl px-6 py-4 border border-[#00bfa6]/20">
+                <div className="text-2xl font-bold text-[#00bfa6]">98%</div>
+                <div className="text-[#a0a0a0] text-sm">Acceptance Rate</div>
               </div>
-              <div className="w-20 h-12 bg-white/10 rounded-md backdrop-blur-sm flex items-center justify-center">
-                <span className="text-[#e0e0e0] font-semibold text-xs">UNIVERSITY 2</span>
+              <div className="bg-[#1F1F1F]/50 backdrop-blur-sm rounded-xl px-6 py-4 border border-[#2d9cdb]/20">
+                <div className="text-2xl font-bold text-[#2d9cdb]">500+</div>
+                <div className="text-[#a0a0a0] text-sm">Global Partners</div>
               </div>
-              <div className="w-20 h-12 bg-white/10 rounded-md backdrop-blur-sm flex items-center justify-center">
-                <span className="text-[#e0e0e0] font-semibold text-xs">INSTITUTE 1</span>
-              </div>
-              <div className="w-20 h-12 bg-white/10 rounded-md backdrop-blur-sm flex items-center justify-center">
-                <span className="text-[#e0e0e0] font-semibold text-xs">INSTITUTE 2</span>
+              <div className="bg-[#1F1F1F]/50 backdrop-blur-sm rounded-xl px-6 py-4 border border-[#f0e6d2]/20">
+                <div className="text-2xl font-bold text-[#f0e6d2]">50K+</div>
+                <div className="text-[#a0a0a0] text-sm">Success Stories</div>
               </div>
             </div>
           </div>
