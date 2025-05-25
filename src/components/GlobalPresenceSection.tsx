@@ -1,6 +1,6 @@
 
 import { useEffect, useRef, useState } from "react";
-import { School, MapPin, Globe, Users, Building } from "lucide-react";
+import { School, MapPin, Globe, Users, Building, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const GlobalPresenceSection = () => {
@@ -40,7 +40,7 @@ const GlobalPresenceSection = () => {
       region: "North America", 
       x: 20, 
       y: 35, 
-      countries: ["USA", "Canada", "Mexico"],
+      countries: ["USA", "Canada", "Mexico", "Costa Rica", "Jamaica"],
       students: "15,000+",
       institutions: 45,
       color: "#00bfa6"
@@ -50,7 +50,7 @@ const GlobalPresenceSection = () => {
       region: "Europe", 
       x: 50, 
       y: 25, 
-      countries: ["UK", "Germany", "France", "Netherlands"],
+      countries: ["UK", "Germany", "France", "Netherlands", "Spain", "Italy", "Switzerland"],
       students: "22,000+",
       institutions: 68,
       color: "#2d9cdb"
@@ -60,7 +60,7 @@ const GlobalPresenceSection = () => {
       region: "Middle East", 
       x: 60, 
       y: 40, 
-      countries: ["Qatar", "UAE", "Saudi Arabia", "Kuwait"],
+      countries: ["Qatar", "UAE", "Saudi Arabia", "Kuwait", "Oman", "Bahrain"],
       students: "12,000+",
       institutions: 32,
       color: "#f0e6d2"
@@ -70,7 +70,7 @@ const GlobalPresenceSection = () => {
       region: "South Asia", 
       x: 75, 
       y: 45, 
-      countries: ["India", "Nepal", "Bangladesh", "Sri Lanka"],
+      countries: ["India", "Nepal", "Bangladesh", "Sri Lanka", "Pakistan", "Maldives"],
       students: "28,000+",
       institutions: 89,
       color: "#00bfa6"
@@ -80,7 +80,7 @@ const GlobalPresenceSection = () => {
       region: "East Asia", 
       x: 85, 
       y: 35, 
-      countries: ["Singapore", "Malaysia", "Thailand"],
+      countries: ["Singapore", "Malaysia", "Thailand", "Philippines", "Indonesia"],
       students: "18,000+",
       institutions: 54,
       color: "#2d9cdb"
@@ -221,17 +221,22 @@ const GlobalPresenceSection = () => {
                 </svg>
               ))}
               
-              {/* Animated Degree Symbols */}
+              {/* Animated Graduation Cap Icons */}
               {isVisible && flightPaths.map((path, index) => (
                 <div 
-                  key={`degree-${index}`}
-                  className="absolute pointer-events-none z-20 text-[#00bfa6] text-2xl font-bold"
+                  key={`graduation-${index}`}
+                  className="absolute pointer-events-none z-20"
                   style={{
                     animation: `flyPath${index} 8s infinite linear ${path.delay}s`,
-                    textShadow: '0 0 10px currentColor'
                   }}
                 >
-                  °
+                  <GraduationCap 
+                    className="w-6 h-6 text-[#00bfa6]" 
+                    style={{
+                      filter: 'drop-shadow(0 0 8px currentColor)',
+                      transform: 'rotate(15deg)'
+                    }}
+                  />
                 </div>
               ))}
               
@@ -362,28 +367,28 @@ const GlobalPresenceSection = () => {
           }
           
           @keyframes flyPath0 {
-            0% { left: 20%; top: 35%; transform: rotate(45deg); }
-            100% { left: 50%; top: 25%; transform: rotate(45deg); }
+            0% { left: 20%; top: 35%; }
+            100% { left: 50%; top: 25%; }
           }
           
           @keyframes flyPath1 {
-            0% { left: 50%; top: 25%; transform: rotate(90deg); }
-            100% { left: 75%; top: 45%; transform: rotate(90deg); }
+            0% { left: 50%; top: 25%; }
+            100% { left: 75%; top: 45%; }
           }
           
           @keyframes flyPath2 {
-            0% { left: 60%; top: 40%; transform: rotate(30deg); }
-            100% { left: 85%; top: 35%; transform: rotate(30deg); }
+            0% { left: 60%; top: 40%; }
+            100% { left: 85%; top: 35%; }
           }
           
           @keyframes flyPath3 {
-            0% { left: 85%; top: 35%; transform: rotate(-120deg); }
-            100% { left: 20%; top: 35%; transform: rotate(-120deg); }
+            0% { left: 85%; top: 35%; }
+            100% { left: 20%; top: 35%; }
           }
           
           @keyframes flyPath4 {
-            0% { left: 75%; top: 45%; transform: rotate(-45deg); }
-            100% { left: 60%; top: 40%; transform: rotate(-45deg); }
+            0% { left: 75%; top: 45%; }
+            100% { left: 60%; top: 40%; }
           }
         `}
       </style>
