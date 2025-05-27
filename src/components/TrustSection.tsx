@@ -26,19 +26,19 @@ const TrustSection = () => {
       quote: "GGS Global Education transformed my academic journey. Their personalized approach and expert guidance helped me secure admission to my dream university.",
       name: "Sarah Johnson",
       title: "Medical Student, USA",
-      image: "/lovable-uploads/b9a8337f-02d9-4ca4-aa84-433ca93b3bd5.png"
+      image: "/GGS-uploads/b9a8337f-02d9-4ca4-aa84-433ca93b3bd5.png"
     },
     {
       quote: "The study abroad consultation services at GGS were exceptional. They simplified the complex application process and provided support every step of the way.",
       name: "Mohammed Al-Farsi",
       title: "Engineering Graduate, Qatar",
-      image: "/lovable-uploads/6e6f10f5-19a7-4d1b-9b6c-4f05ab4f5c8e.png"
+      image: "/GGS-uploads/6e6f10f5-19a7-4d1b-9b6c-4f05ab4f5c8e.png"
     },
     {
       quote: "The IELTS preparation program gave me the confidence and skills to achieve my target score. The instructors were knowledgeable and supportive.",
       name: "Priya Sharma",
       title: "Masters Student, India",
-      image: "/lovable-uploads/0936b0f3-ae34-4f84-a495-1a94de3ba48c.png"
+      image: "/GGS-uploads/0936b0f3-ae34-4f84-a495-1a94de3ba48c.png"
     }
   ];
 

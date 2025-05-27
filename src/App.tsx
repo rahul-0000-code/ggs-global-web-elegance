@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import BookConsultation from "./pages/BookConsultation";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import NotFound from "./pages/NotFound";
+import Payment from "./pages/Payment";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/book-consultation" element={<BookConsultation />} />
           <Route path="/payment-success" element={<PaymentSuccess />} />
+          <Route path="/payment" element={<Payment />} />          {/* ← new */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

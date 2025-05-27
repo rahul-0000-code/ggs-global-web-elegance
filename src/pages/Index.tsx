@@ -29,7 +29,7 @@ const Index = () => {
         </div>
         
         {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[url('/lovable-uploads/cf86f43a-dfc9-45f0-9b64-e278a2bec9b6.png')] opacity-5 bg-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/GGS-uploads/cf86f43a-dfc9-45f0-9b64-e278a2bec9b6.png')] opacity-5 bg-repeat"></div>
       </div>
       
       <Navbar />
