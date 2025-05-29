@@ -32,7 +32,7 @@ const servicePackages = [
   {
     id: "academic",
     name: "Academic Tutoring",
-    price: 300,
+    // price: 300,
     features: [
       "2 sessions per week",
       "Personalized curriculum",
@@ -45,7 +45,7 @@ const servicePackages = [
   {
     id: "career",
     name: "Career Counseling",
-    price: 500,
+    // price: 500,
     features: [
       "3 counseling sessions",
       "Aptitude assessment",
@@ -59,7 +59,7 @@ const servicePackages = [
   {
     id: "international",
     name: "Study Abroad Package",
-    price: 1200,
+    // price: 1200,
     features: [
       "University selection guidance",
       "Application assistance for 5 universities",
@@ -74,7 +74,7 @@ const servicePackages = [
   {
     id: "ielts",
     name: "IELTS Preparation",
-    price: 400,
+    // price: 400,
     features: [
       "8 live training sessions",
       "Practice test materials",
@@ -330,7 +330,7 @@ const BookConsultation = () => {
                   className={`fancy-border cursor-pointer transition-all duration-300 hover:-translate-y-2 ${
                     selectedPackage === pkg.id ? 'ring-2 ring-[#00bfa6] ring-opacity-70' : ''
                   }`}
-                  style={{ "--glow-color": `${pkg.color}80` } as React.CSSProperties}
+                  // style={{ "--glow-color": `${pkg.color}80` } as React.CSSProperties}
                   onClick={() => handlePackageSelect(pkg.id)}
                 >
                   <div className="p-6 relative">
@@ -342,7 +342,7 @@ const BookConsultation = () => {
                     <h4 className="text-lg font-semibold text-[#f0e6d2] mb-2">{pkg.name}</h4>
                     <div className="flex items-end mb-4">
                       <span className="text-2xl font-bold text-[#00bfa6]">${pkg.price}</span>
-                      <span className="text-[#a0a0a0] ml-1">/package</span>
+                      {/* <span className="text-[#a0a0a0] ml-1">/package</span> */}
                     </div>
                     <ul className="space-y-2">
                       {pkg.features.map((feature, index) => (
@@ -625,7 +625,7 @@ const BookConsultation = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="mb-12 text-center">
-            <h1 className="text-3xl md:text-4xl font-bold text-[#f0e6d2] mb-4">Book Your Consultation</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-[#f0e6d2] mb-4">Enroll Now</h1>
             <div className="h-1 w-20 bg-[#00bfa6] mx-auto mb-6"></div>
             <p className="text-lg text-[#a0a0a0] max-w-2xl mx-auto">
               Schedule a personalized consultation with our education experts and take the first step towards academic excellence.

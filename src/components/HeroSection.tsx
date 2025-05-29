@@ -109,7 +109,7 @@ const HeroSection = () => {
               size="lg"
               onClick={handleBookConsultation}
             >
-              Book Consultation
+              Enroll Now
             </Button>
           </div>
           

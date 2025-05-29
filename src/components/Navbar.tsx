@@ -156,7 +156,7 @@ const Navbar = () => {
                   onClick={handleBookConsultation}
                   className="bg-[#00bfa6] hover:bg-[#00bfa6]/80 text-white ml-2"
                 >
-                  Book Consultation
+                  Enroll Now
                 </Button>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -217,7 +217,7 @@ const Navbar = () => {
               onClick={handleBookConsultation}
               className="bg-[#00bfa6] hover:bg-[#00bfa6]/80 text-white w-full mt-2"
             >
-              Book Consultation
+              Enroll Now
             </Button>
           </nav>
         </div>
