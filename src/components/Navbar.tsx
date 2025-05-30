@@ -106,9 +106,9 @@ const Navbar = () => {
           </span>
         </Link>
 
-<Link to="/payment" className="px-4 py-2 bg-blue-600 text-white rounded">
+{/* <Link to="/payment" className="px-4 py-2 bg-blue-600 text-white rounded">
   Pay Now
-</Link>
+</Link> */}
 
 
         {/* Desktop Navigation */}

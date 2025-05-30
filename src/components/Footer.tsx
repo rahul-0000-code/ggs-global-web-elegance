@@ -10,13 +10,20 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
+            <div className="w-40 h-auto mb-2"> 
+                <img 
+                  src="/GGS-uploads/ggsLogo.jpeg" 
+                  alt="GGS Global Education Logo"
+                  className="w-full h-auto object-contain" 
+                />
+              </div>
               <GraduationCap size={28} className="text-[#00bfa6]" />
               <span className="text-xl font-bold text-[#f0e6d2]">
                 GGS <span className="text-[#00bfa6]">Global</span> Education
               </span>
             </Link>
             <p className="text-sm text-[#a0a0a0] max-w-xs">
-              Premier academic coaching and counseling center with over 10 years of experience
+              Premier academic coaching and counseling center with over a decade of experience
               in transforming lives through education.
             </p>
             <div className="flex space-x-4">
@@ -114,13 +121,13 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Phone size={18} className="text-[#00bfa6] mt-1 shrink-0" />
                 <div>
-                  <p className="text-[#a0a0a0] text-sm">Qatar: +974-31188241</p>
-                  <p className="text-[#a0a0a0] text-sm">India: +91-9743684250</p>
+                  <p className="text-[#a0a0a0] text-sm"> +974-31188241</p>
+                  <p className="text-[#a0a0a0] text-sm"> +91-9743684250</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={18} className="text-[#00bfa6] mt-1 shrink-0" />
-                <p className="text-[#a0a0a0] text-sm">support@ggsglobaledu.com</p>
+                <p className="text-[#a0a0a0] text-sm">hello@ggsglobaledu.com</p>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#00bfa6] mt-1 shrink-0" />

@@ -18,7 +18,7 @@ const Services = () => {
       <div className="pt-32 pb-16 bg-[#1F1F1F]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f0e6d2] mb-6">Our Services</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f0e6d2] mb-6">Executive Team</h1>
             <p className="text-lg text-[#a0a0a0]">
               Explore our comprehensive range of educational and consultancy services designed to help you excel.
             </p>

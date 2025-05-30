@@ -41,7 +41,7 @@ const ServicesSection = () => {
     academic: [
       {
         title: "Academic Tutoring",
-        description: "Personalized tutoring services for K-12 students, undergraduates, and postgraduates across various subjects.",
+        description: "Personalized tutoring services for 10th-12th students, undergraduates, and postgraduates across various subjects.",
         icon: <Book className="h-6 w-6 text-[#00bfa6]" />,
         image: "/GGS-uploads/a7c6cf4a-9763-4176-83d8-b988b585431d.png"
       },

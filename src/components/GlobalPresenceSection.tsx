@@ -34,77 +34,166 @@ const GlobalPresenceSection = () => {
     };
   }, []);
 
-  const locations = [
-    { 
-      id: 1,
-      region: "North America", 
-      x: 20, 
-      y: 35, 
-      countries: ["USA", "Canada", "Mexico", "Costa Rica", "Jamaica"],
-      students: "15,000+",
-      institutions: 45,
-      color: "#00bfa6"
-    },
-    { 
-      id: 2,
-      region: "Europe", 
-      x: 50, 
-      y: 25, 
-      countries: ["UK", "Germany", "France", "Netherlands", "Spain", "Italy", "Switzerland"],
-      students: "22,000+",
-      institutions: 68,
-      color: "#2d9cdb"
-    },
-    { 
-      id: 3,
-      region: "Middle East", 
-      x: 60, 
-      y: 40, 
-      countries: ["Qatar", "UAE", "Saudi Arabia", "Kuwait", "Oman", "Bahrain"],
-      students: "12,000+",
-      institutions: 32,
-      color: "#f0e6d2"
-    },
-    { 
-      id: 4,
-      region: "South Asia", 
-      x: 75, 
-      y: 45, 
-      countries: ["India", "Nepal", "Bangladesh", "Sri Lanka", "Pakistan", "Maldives"],
-      students: "28,000+",
-      institutions: 89,
-      color: "#00bfa6"
-    },
-    { 
-      id: 5,
-      region: "East Asia", 
-      x: 85, 
-      y: 35, 
-      countries: ["Singapore", "Malaysia", "Thailand", "Philippines", "Indonesia"],
-      students: "18,000+",
-      institutions: 54,
-      color: "#2d9cdb"
-    }
-  ];
+const locations = [
+  { 
+    id: 1,
+    region: "North America", 
+    x: 20, 
+    y: 35, 
+    countries: ["USA", "Canada", "Mexico", "Costa Rica", "Jamaica", "Panama", "Dominican Republic"],
+    students: "18,000+",
+    institutions: 52,
+    color: "#00bfa6"
+  },
+  { 
+    id: 2,
+    region: "Europe", 
+    x: 50, 
+    y: 25, 
+    countries: ["UK", "Germany", "France", "Netherlands", "Spain", "Italy", "Switzerland", "Sweden", "Norway", "Denmark"],
+    students: "25,000+",
+    institutions: 78,
+    color: "#2d9cdb"
+  },
+  { 
+    id: 3,
+    region: "Middle East", 
+    x: 60, 
+    y: 40, 
+    countries: ["Qatar", "UAE", "Saudi Arabia", "Kuwait", "Oman", "Bahrain", "Jordan", "Lebanon", "Egypt"],
+    students: "15,000+",
+    institutions: 42,
+    color: "#f0e6d2"
+  },
+  { 
+    id: 4,
+    region: "South Asia", 
+    x: 75, 
+    y: 45, 
+    countries: ["India", "Pakistan", "Nepal", "Bangladesh", "Sri Lanka", "Maldives", "Bhutan"],
+    color: "#00bfa6"
+  },
+  { 
+    id: 5,
+    region: "East Asia", 
+    x: 85, 
+    y: 35, 
+    countries: ["Singapore", "Malaysia", "Thailand", "Philippines", "Indonesia", "Vietnam", "Hong Kong"],
+    color: "#2d9cdb"
+  },
+  { 
+    id: 6,
+    region: "Africa", 
+    x: 55, 
+    y: 55, 
+    countries: ["South Africa", "Nigeria", "Kenya", "Ghana", "Morocco", "Tanzania"],
+    color: "#ff9f1c"
+  },
+  { 
+    id: 7,
+    region: "Oceania", 
+    x: 90, 
+    y: 60, 
+    countries: ["Australia", "New Zealand", "Fiji"],
+    color: "#e71d36"
+  },
+  { 
+    id: 8,
+    region: "South America", 
+    x: 30, 
+    y: 60, 
+    countries: ["Brazil", "Argentina", "Chile", "Colombia", "Peru"],
+    color: "#662e9b"
+  },
+  { 
+    id: 9,
+    region: "United Kingdom", 
+    x: 10, 
+    y: 90, 
+    countries: ["England", "Scotland", "Wales", "Northern Ireland"],
+    color: "#662e9b"
+  },
+  { 
+    id: 10,
+    region: "Russia", 
+    x: 65, 
+    y: 15, 
+    countries: ["Russia", "Belarus", "Ukraine", "Kazakhstan", "Armenia"],
+    color: "#662e9b"
+  },
+  { 
+    id: 11,
+    region: "Spain", 
+    x: 35, 
+    y: 15, 
+    countries: ["Spain", "Portugal", "Andorra"],
+    color: "#ff9f1c"
+  }
+];
 
-  const flightPaths = [
-    { from: { x: 20, y: 35 }, to: { x: 50, y: 25 }, delay: 0 },
-    { from: { x: 50, y: 25 }, to: { x: 75, y: 45 }, delay: 2 },
-    { from: { x: 60, y: 40 }, to: { x: 85, y: 35 }, delay: 4 },
-    { from: { x: 85, y: 35 }, to: { x: 20, y: 35 }, delay: 6 },
-    { from: { x: 75, y: 45 }, to: { x: 60, y: 40 }, delay: 8 }
-  ];
+const flightPaths = [
+  { from: { x: 20, y: 35 }, to: { x: 50, y: 25 }, delay: 0 },   
+  { from: { x: 50, y: 25 }, to: { x: 75, y: 45 }, delay: 2 },   
+  { from: { x: 60, y: 40 }, to: { x: 85, y: 35 }, delay: 4 },   
+  { from: { x: 85, y: 35 }, to: { x: 20, y: 35 }, delay: 6 },   
+  { from: { x: 75, y: 45 }, to: { x: 60, y: 40 }, delay: 8 },   
+  { from: { x: 55, y: 55 }, to: { x: 60, y: 40 }, delay: 10 },   
+  { from: { x: 90, y: 60 }, to: { x: 85, y: 35 }, delay: 12 },   
+  { from: { x: 30, y: 60 }, to: { x: 20, y: 35 }, delay: 14 },   
+  { from: { x: 50, y: 25 }, to: { x: 55, y: 55 }, delay: 16 },   
+  { from: { x: 75, y: 45 }, to: { x: 90, y: 60 }, delay: 18 }    
+];
 
-  const partners = [
-    { name: "Harvard University", region: "North America", type: "Ivy League", logo: "🏛️" },
-    { name: "University of Oxford", region: "Europe", type: "Russell Group", logo: "🎓" },
-    { name: "Qatar University", region: "Middle East", type: "Research University", logo: "🕌" },
-    { name: "University of Toronto", region: "North America", type: "U15 Group", logo: "🍁" },
-    { name: "Technical University of Munich", region: "Europe", type: "TU9 Alliance", logo: "⚙️" },
-    { name: "Nanyang Technological University", region: "East Asia", type: "Global University", logo: "🌏" },
-    { name: "University of Delhi", region: "South Asia", type: "Central University", logo: "🇮🇳" },
-    { name: "American University of Sharjah", region: "Middle East", type: "Liberal Arts", logo: "🏗️" }
-  ];
+const partners = [
+  { 
+    name: "World Directory of Medical Schools (WDOMS)", 
+    region: "Global", 
+    type: "Medical Education Authority", 
+    logo: "🏥" 
+  },
+  { 
+    name: "World Health Organization (WHO)", 
+    region: "Global", 
+    type: "United Nations Health Agency", 
+    logo: "🌐" 
+  },
+  { 
+    name: "NAAC (A+ Grade)", 
+    region: "India", 
+    type: "Higher Education Accreditation", 
+    logo: "⭐" 
+  },
+  { 
+    name: "AICTE", 
+    region: "India", 
+    type: "Technical Education Regulator", 
+    logo: "⚙️" 
+  },
+  { 
+    name: "PCI (Pharmacy Council of India)", 
+    region: "India", 
+    type: "Pharmacy Education Authority", 
+    logo: "💊" 
+  },
+  { 
+    name: "INC (Indian Nursing Council)", 
+    region: "India", 
+    type: "Nursing Education Regulator", 
+    logo: "🩺" 
+  },
+  { 
+    name: "International Association of Universities - IAU", 
+    region: "Global", 
+    type: "Higher Education Network", 
+    logo: "🎓" 
+  },
+  { 
+    name: "WES (World Education Services)", 
+    region: "Global", 
+    type: "Credential Evaluation", 
+    logo: "📝" 
+  },
+];
 
   return (
     <section id="global" className="py-20 bg-gradient-to-b from-[#0a0a0a] via-[#1F1F1F] to-[#121212] relative overflow-hidden">
@@ -340,58 +429,88 @@ const GlobalPresenceSection = () => {
         </div>
       </div>
 
-      <style>
-        {`
-          @keyframes pinAppear {
-            0% {
-              opacity: 0;
-              transform: translate(-50%, -50%) scale(0);
-            }
-            70% {
-              opacity: 1;
-              transform: translate(-50%, -50%) scale(1.3);
-            }
-            100% {
-              opacity: 1;
-              transform: translate(-50%, -50%) scale(1);
-            }
-          }
-          
-          @keyframes drawPath {
-            0% {
-              stroke-dashoffset: 100;
-            }
-            100% {
-              stroke-dashoffset: 0;
-            }
-          }
-          
-          @keyframes flyPath0 {
-            0% { left: 20%; top: 35%; }
-            100% { left: 50%; top: 25%; }
-          }
-          
-          @keyframes flyPath1 {
-            0% { left: 50%; top: 25%; }
-            100% { left: 75%; top: 45%; }
-          }
-          
-          @keyframes flyPath2 {
-            0% { left: 60%; top: 40%; }
-            100% { left: 85%; top: 35%; }
-          }
-          
-          @keyframes flyPath3 {
-            0% { left: 85%; top: 35%; }
-            100% { left: 20%; top: 35%; }
-          }
-          
-          @keyframes flyPath4 {
-            0% { left: 75%; top: 45%; }
-            100% { left: 60%; top: 40%; }
-          }
-        `}
-      </style>
+<style>
+  {`
+    @keyframes pinAppear {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+      }
+      70% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.3);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+    
+    @keyframes drawPath {
+      0% {
+        stroke-dashoffset: 100;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+    @keyframes flyPath0 {
+      0% { left: 20%; top: 35%; }
+      100% { left: 50%; top: 25%; }
+    }
+    
+    @keyframes flyPath1 {
+      0% { left: 50%; top: 25%; }
+      100% { left: 75%; top: 45%; }
+    }
+    
+    @keyframes flyPath2 {
+      0% { left: 60%; top: 40%; }
+      100% { left: 85%; top: 35%; }
+    }
+    
+    @keyframes flyPath3 {
+      0% { left: 85%; top: 35%; }
+      100% { left: 20%; top: 35%; }
+    }
+    
+    @keyframes flyPath4 {
+      0% { left: 75%; top: 45%; }
+      100% { left: 60%; top: 40%; }
+    }
+
+    @keyframes flyPath5 {
+      0% { left: 55%; top: 55%; }
+      100% { left: 60%; top: 40%; }
+    }
+
+    @keyframes flyPath6 {
+      0% { left: 90%; top: 60%; }
+      100% { left: 85%; top: 35%; }
+    }
+
+    @keyframes flyPath7 {
+      0% { left: 30%; top: 60%; }
+      100% { left: 20%; top: 35%; }
+    }
+
+    @keyframes flyPath8 {
+      0% { left: 50%; top: 25%; }
+      100% { left: 55%; top: 55%; }
+    }
+
+    @keyframes flyPath9 {
+      0% { left: 15%; top: 95%; }
+      100% { left: 90%; top: 60%; }
+    }
+
+    @keyframes flyPath10 {
+      0% { left: 35%; top: 15%; }
+      100% { left: 90%; top: 60%; }
+    }
+  `}
+</style>
     </section>
   );
 };

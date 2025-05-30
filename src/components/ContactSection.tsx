@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Phone, Mail, MessageSquare } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
+import { Link } from "react-router-dom";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -62,9 +63,9 @@ const ContactSection = () => {
                     <Phone className="h-5 w-5 text-[#00bfa6] group-hover:scale-110 transition-transform" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-[#f0e6d2] mb-2">Call Us</h3>
-                    <p className="text-[#a0a0a0] text-sm">Qatar: +974-31188241</p>
-                    <p className="text-[#a0a0a0] text-sm">India: +91-9743684250</p>
+                    <h3 className="text-lg font-semibold text-[#f0e6d2] mb-2">24/7 Whatsapp Support</h3>
+                    <p className="text-[#a0a0a0] text-sm"> +974-31188241</p>
+                    <p className="text-[#a0a0a0] text-sm"> +91-9743684250</p>
                   </div>
                 </div>
               </div>
@@ -76,26 +77,31 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-[#f0e6d2] mb-2">Email Us</h3>
-                    <p className="text-[#a0a0a0] text-sm">support@ggsglobaledu.com</p>
-                    <p className="text-[#a0a0a0] text-sm">info@ggsglobaledu.com</p>
+                    <p className="text-[#a0a0a0] text-sm">hello@ggsglobaledu.com</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-[#1F1F1F] p-6 rounded-xl border border-[#2d2d2d] hover:border-[#00bfa6] transition-all group">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 p-2 bg-[#121212] rounded-lg">
-                    <MessageSquare className="h-5 w-5 text-[#00bfa6] group-hover:scale-110 transition-transform" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-[#f0e6d2] mb-2">WhatsApp</h3>
-                    <p className="text-[#a0a0a0] text-sm">Send us a message on WhatsApp</p>
-                    <Button variant="outline" size="sm" className="mt-2 border-[#00bfa6] text-[#00bfa6] hover:bg-[#00bfa6]/10">
-                      Chat Now
-                    </Button>
-                  </div>
-                </div>
-              </div>
+<div className="bg-[#1F1F1F] p-6 rounded-xl border border-[#2d2d2d] hover:border-[#00bfa6] transition-all group">
+  <div className="flex items-start gap-4">
+    <div className="mt-1 p-2 bg-[#121212] rounded-lg">
+      <MessageSquare className="h-5 w-5 text-[#00bfa6] group-hover:scale-110 transition-transform" />
+    </div>
+    <div>
+      <h3 className="text-lg font-semibold text-[#f0e6d2] mb-2">Payment</h3>
+      <p className="text-[#a0a0a0] text-sm">Secure payments and transactions</p>
+      <Link to="/payment">
+        <Button
+          variant="outline"
+          size="sm"
+          className="mt-2 border-[#00bfa6] text-[#00bfa6] hover:bg-[#00bfa6]/10"
+        >
+          Pay Now
+        </Button>
+      </Link>
+    </div>
+  </div>
+</div>
             </div>
 
             {/* Contact Form */}

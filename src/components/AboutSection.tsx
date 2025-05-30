@@ -43,7 +43,7 @@ const AboutSection = () => {
     {
       year: "2015",
       title: "Middle East Expansion",
-      description: "Expanded services to Qatar and UAE, bringing premium educational services to the region.",
+      description: "Expanded services to the Middle East, bringing premium educational services to the region.",
       color: "#2d9cdb"
     },
     {
@@ -59,13 +59,13 @@ const AboutSection = () => {
       color: "#00bfa6"
     },
     {
-      year: "2021",
+      year: "2020",
       title: "Digital Transformation",
       description: "Launched virtual learning platforms to reach students across geographic boundaries.",
       color: "#2d9cdb"
     },
     {
-      year: "2023",
+      year: "2021",
       title: "Service Excellence",
       description: "Recognized for excellence in academic coaching and international education consulting.",
       color: "#f0e6d2"

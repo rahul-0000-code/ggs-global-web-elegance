@@ -44,10 +44,11 @@ const HeroSection = () => {
   };
 
   const institutes = [
-    { name: "Harvard University", logo: "🎓", field: "Medicine & Business" },
-    { name: "Oxford University", logo: "🏛️", field: "Liberal Arts & Sciences" },
-    { name: "MIT", logo: "⚗️", field: "Technology & Engineering" },
-    { name: "Stanford University", logo: "🌟", field: "Computer Science & Innovation" }
+    { name: "Middle East", logo: "🎓", field: "Medicine & Business" },
+    { name: "Europe", logo: "🏛️", field: "Liberal Arts & Sciences" },
+    { name: "South Asia", logo: "⚗️", field: "Technology & Engineering" },
+    { name: "North America", logo: "🌟", field: "Computer Science & Innovation" },
+    { name: "Southeast Asis", logo: "🌟", field: "Computer Science & Innovation" }
   ];
 
   return (
@@ -115,37 +116,37 @@ const HeroSection = () => {
           
           <div className="mt-20">
             <p className="text-[#a0a0a0] mb-8 text-sm uppercase tracking-widest font-semibold">
-              Our Students Excel At World's Top Universities
+              Our Students Excel At World's Top Universities And Trusted By
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-              {institutes.map((institute, index) => (
-                <div 
-                  key={index}
-                  className="group relative bg-gradient-to-br from-[#1F1F1F]/80 to-[#2d2d2d]/60 backdrop-blur-xl rounded-2xl p-6 border border-[#00bfa6]/20 hover:border-[#00bfa6]/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-[#00bfa6]/20"
-                  style={{
-                    animationDelay: `${index * 0.2}s`
-                  }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#00bfa6]/5 to-[#2d9cdb]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  <div className="relative z-10">
-                    <div className="text-4xl mb-4 group-hover:animate-bounce">
-                      {institute.logo}
-                    </div>
-                    <h3 className="text-[#f0e6d2] font-bold text-lg mb-2 group-hover:text-[#00bfa6] transition-colors duration-300">
-                      {institute.name}
-                    </h3>
-                    <p className="text-[#a0a0a0] text-sm leading-relaxed">
-                      {institute.field}
-                    </p>
-                  </div>
-                  
-                  {/* Decorative corner accent */}
-                  <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#00bfa6]/30 rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-[#2d9cdb]/30 rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </div>
-              ))}
-            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+  {institutes.map((institute, index) => (
+    <div 
+      key={index}
+      className="group relative bg-gradient-to-br from-[#1F1F1F]/80 to-[#2d2d2d]/60 backdrop-blur-xl rounded-xl p-4 border border-[#00bfa6]/20 hover:border-[#00bfa6]/50 transition-all duration-500 hover:transform hover:scale-[1.03] hover:shadow-lg hover:shadow-[#00bfa6]/15"
+      style={{
+        animationDelay: `${index * 0.2}s`
+      }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-[#00bfa6]/5 to-[#2d9cdb]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      
+      <div className="relative z-10">
+        <div className="text-3xl mb-2 group-hover:animate-bounce">
+          {institute.logo}
+        </div>
+        <h3 className="text-[#f0e6d2] font-bold text-base mb-1 group-hover:text-[#00bfa6] transition-colors duration-300">
+          {institute.name}
+        </h3>
+        <p className="text-[#a0a0a0] text-xs leading-relaxed">
+          {institute.field}
+        </p>
+      </div>
+      
+      {/* Decorative corner accent */}
+      <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[#00bfa6]/30 rounded-tr-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[#2d9cdb]/30 rounded-bl-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    </div>
+  ))}
+</div>
             
             {/* Success metrics */}
             <div className="mt-12 flex flex-wrap justify-center gap-8 text-center">
