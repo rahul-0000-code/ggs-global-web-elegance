@@ -1,0 +1,9 @@
+Book consulation dont show price and checkout, just query information
+Register you want where they will pay 
+Our Services PICS needs to be changed
+
+
+
+<Link to="/payment" className="px-4 py-2 bg-blue-600 text-white rounded">
+  Pay Now
+</Link>

@@ -15,7 +15,7 @@ const Payment = () => {
     const script = document.createElement("script");
     script.src = "https://checkout.razorpay.com/v1/payment-button.js";
     script.async = true;
-    script.setAttribute("data-payment_button_id", "");
+    script.setAttribute("data-payment_button_id", "pl_QaOWd8eISP1E35");
     script.setAttribute("data-button_text", "Pay Now");
     formRef.current.appendChild(script);
   }, []);
