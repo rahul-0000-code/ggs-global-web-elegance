@@ -40,17 +40,17 @@ const AboutSection = () => {
       description: "GGS Global Education was established with a vision to transform education globally.",
       color: "#00bfa6"
     },
-    {
+        {
       year: "2015",
-      title: "Middle East Expansion",
-      description: "Expanded services to the Middle East, bringing premium educational services to the region.",
-      color: "#2d9cdb"
-    },
-    {
-      year: "2017",
       title: "South Asia Growth",
       description: "Strengthened presence in India and neighboring countries with specialized programs.",
       color: "#f0e6d2"
+    },
+    {
+      year: "2017",
+      title: "Middle East Expansion",
+      description: "Expanded services to the Middle East, bringing premium educational services to the region.",
+      color: "#2d9cdb"
     },
     {
       year: "2019",
