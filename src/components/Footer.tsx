@@ -132,7 +132,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#00bfa6] mt-1 shrink-0" />
                 <p className="text-[#a0a0a0] text-sm">
-                  Locations across Middle East, South Asia, North America, and Europe
+                  Middle East, South Asia, North America, and Europe
                 </p>
               </li>
             </ul>
