@@ -12,7 +12,7 @@ const Footer = () => {
             <Link to="/" className="flex items-center gap-2">
             <div className="w-40 h-auto mb-2"> 
                 <img 
-                  src="/GGS-uploads/ggsLogo.jpeg" 
+                  src="/GGS-uploads/noBgGgsLogo.png" 
                   alt="GGS Global Education Logo"
                   className="w-full h-auto object-contain" 
                 />
