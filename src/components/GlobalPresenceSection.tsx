@@ -49,11 +49,21 @@ const locations = [
     id: 2,
     region: "Europe", 
     x: 50, 
-    y: 25, 
-    countries: ["UK", "Germany", "France", "Netherlands", "Spain", "Italy", "Switzerland", "Sweden", "Norway", "Denmark"],
+    y: 20, 
+    countries: ["Germany", "France", "Netherlands", "Italy", "Switzerland", "Sweden", "Norway", "Denmark"],
     students: "25,000+",
     institutions: 78,
     color: "#2d9cdb"
+  },
+  { 
+    id: 9,
+    region: "United Kingdom", 
+    x: 45, 
+    y: 10, 
+    countries: ["England", "Scotland", "Wales", "Northern Ireland"],
+    color: "#ffcc00",
+    students: "N/A",
+    institutions: "N/A"
   },
   { 
     id: 3,
@@ -90,27 +100,11 @@ const locations = [
     color: "#ff9f1c"
   },
   { 
-    id: 7,
-    region: "Oceania", 
-    x: 90, 
-    y: 60, 
-    countries: ["Australia", "New Zealand", "Fiji"],
-    color: "#e71d36"
-  },
-  { 
     id: 8,
     region: "South America", 
     x: 30, 
     y: 60, 
     countries: ["Brazil", "Argentina", "Chile", "Colombia", "Peru"],
-    color: "#662e9b"
-  },
-  { 
-    id: 9,
-    region: "United Kingdom", 
-    x: 10, 
-    y: 90, 
-    countries: ["England", "Scotland", "Wales", "Northern Ireland"],
     color: "#662e9b"
   },
   { 
@@ -402,7 +396,7 @@ const partners = [
         {/* Partner Institutions Grid */}
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-[#f0e6d2] mb-4">Premier Partner Institutions</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-[#f0e6d2] mb-4">Our Premier Partner Accreditations</h3>
             <p className="text-[#a0a0a0] max-w-2xl mx-auto">
               Collaborating with world-renowned universities and institutions to provide unparalleled educational opportunities.
             </p>
