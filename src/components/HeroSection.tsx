@@ -44,11 +44,11 @@ const HeroSection = () => {
   };
 
   const institutes = [
-    { name: "Middle East", logo: "🎓", field: "Medicine & Business" },
-    { name: "Europe", logo: "🏛️", field: "Liberal Arts & Sciences" },
-    { name: "South Asia", logo: "⚗️", field: "Technology & Engineering" },
-    { name: "North America", logo: "🌟", field: "Computer Science & Innovation" },
-    { name: "Southeast Asis", logo: "🌟", field: "Computer Science & Innovation" }
+    { name: "Middle East", logo: "🎓" },
+    { name: "Europe", logo: "🏛️" },
+    { name: "South Asia", logo: "⚗️" },
+    { name: "North America", logo: "🌟" },
+    { name: "Southeast Asis", logo: "🌟" }
   ];
 
   return (
