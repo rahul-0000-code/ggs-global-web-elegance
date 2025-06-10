@@ -48,7 +48,7 @@ const HeroSection = () => {
     { name: "Europe", logo: "🏛️" },
     { name: "South Asia", logo: "⚗️" },
     { name: "North America", logo: "🌟" },
-    { name: "Southeast Asis", logo: "🌟" }
+    { name: "Southeast Asia", logo: "🧧" }
   ];
 
   return (

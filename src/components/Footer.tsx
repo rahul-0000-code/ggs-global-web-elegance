@@ -17,7 +17,7 @@ const Footer = () => {
                   className="w-full h-auto object-contain" 
                 />
               </div>
-              <GraduationCap size={28} className="text-[#00bfa6]" />
+              {/* <GraduationCap size={28} className="text-[#00bfa6]" /> */}
               <span className="text-xl font-bold text-[#f0e6d2]">
                 GGS <span className="text-[#00bfa6]">Global</span> Education
               </span>
